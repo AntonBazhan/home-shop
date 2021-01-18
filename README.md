@@ -1,6 +1,6 @@
 # homy-shop 
 
-<a href="https://antonbazhan.github.io/home-shop/index.html">Online shop</a>
+<a href="https://antonbazhan.github.io/templats/index.html">Online shop</a>
 
 Создать страницу, с адаптивным дизайном, согласно предоставленному шаблону.
 
