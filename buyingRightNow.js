@@ -2,7 +2,7 @@ export default (buyingNow) => {
   const buyingRightNow = buyingNow
     .map(
       ({ title, img, url }) => ` <div class="right-now_item">
-      <img  src="${img}" alt="Photo" />
+      <img  src="${img || "./images/other/noimage.png"}" alt="Photo" />
       <a href="${url}" class="right-now_item__link">${title}</a>
   </div>`
     )

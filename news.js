@@ -21,8 +21,8 @@ export default (news) => {
       const currentDate = new Date(date);
       const day = currentDate.getDate();
       const month = months[currentDate.getMonth() + 1];
-
-      return `
+      if (date && title && description && img && url) {
+        return `
         <div class="news__item">
         <div class="news__item_left">
             <img class="news__img" src="${img}">
@@ -40,6 +40,7 @@ export default (news) => {
             </div>
         </div>
         </div>`;
+      }
     })
     .join(" ");
 

@@ -57,9 +57,14 @@ export default ({
         </span>
       </div>
       <div class="item__button">
-          <div class="item__buy">
-              <button class="item__buy_link">купить</button>
-          </div>
+          ${
+            price
+              ? `
+              <div class="item__buy"><button class="item__buy_link">купить</button> </div>`
+              : `<p>Товар временно не доступен</p>`
+          }
+              
+          
           <a class="item__details" href="${url}">Подробнее</a>
       </div>
   </div>
