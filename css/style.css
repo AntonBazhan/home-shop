@@ -540,8 +540,11 @@ body {
   margin-bottom: 25px;
 }
 
+.row-container-flex {
+  display: flex;
+}
+
 .row-bottom {
-  margin-bottom: 40px;
   display: flex;
   justify-content: center;
   height: 405px;
@@ -1096,7 +1099,7 @@ body {
     justify-content: space-around;
   }
   .item {
-    width: 213px;
+    width: 220px;
     padding: 0 15px;
   }
   .item__title,
@@ -1637,6 +1640,14 @@ body {
   .arrow-right,
   .footer__middle-right__idea {
     display: block;
+  }
+
+  .arrow-left,
+  .arrow-right {
+    height: 45px;
+    width: 16px;
+    margin: auto 1px;
+    cursor: pointer;
   }
   .burger,
   .row__button,

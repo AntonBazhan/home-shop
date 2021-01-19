@@ -22,28 +22,30 @@ export default (data, title, templator) => {
             </div>
         </div>
     </div>
-    <div class="row-bottom">
+  
         ${
           showArrows
-            ? `
+            ? `<div class="row-container-flex">
+            <div class="arrow-right">
        <img class="arrow-right" src="images/other/vector left.png" alt="left">
-       
+       </div>
         `
             : ""
         }
-
+        <div class="row-bottom">
         ${itemList}
-
+        </div>
         ${
           showArrows
             ? `
-             
-              <img class="arrow-right" src="images/other/vector right.png" alt="Vector right">
-          
+             <div class="arrow-right">
+              <img  src="images/other/vector right.png" alt="Vector right">
+              </div>
+              </div>
             `
             : ""
         }
-    </div>
+        
     </div>
 </section>
 `;
