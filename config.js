@@ -148,6 +148,16 @@ export const ITEMS = [
   {
     type: "new",
     description: "IP телефон Siemens Gigaset C530A IP",
+    img: "",
+    price: "1000",
+    oldPrice: "1100",
+    currency: "UAH",
+    date: "2021/01/01",
+    url: "new_items/item1.html",
+  },
+  {
+    type: "new",
+    description: "IP телефон Siemens Gigaset C530A IP",
     img: "https://same_url.jpg",
     price: "1000",
     oldPrice: "1100",
@@ -298,8 +308,8 @@ export const PROMOTIONS = [
 
 export const BUYING_RIGHT_NOW = [
   {
-    title: "Название товара",
-    img: "https://same_url.jpg",
+    title: "Замок дверной Samsung SHS-2320 XMK/EN",
+    img: "./images/photo/product-1.png",
     url: "https://same_url/item.html",
   },
   {
@@ -312,152 +322,152 @@ export const BUYING_RIGHT_NOW = [
 // =========
 import { badges } from "./constants.js";
 
-export const newsItems = {
-  title: "НОВИНКИ",
-  badge: badges.NEW,
-  items: [
-    {
-      id: 1,
-      img: "images/products/Mobile phone black.png",
-      name: "IP телефон Siemens Gigaset C530A IP",
-      discount: "12 300 р.",
-      price: "15 500 р.",
-    },
-    {
-      id: 2,
-      img: "images/products/Router.png",
-      name: "IP телефон Siemens Gigaset C530A IP",
-      discount: "11 300 р.",
-      price: "15 500 р.",
-    },
-    {
-      id: 3,
-      img: "images/products/Mobile phone white.png",
-      name: "IP телефон Siemens Gigaset C530A IP",
-      discount: "10 300 р.",
-      price: "15 500 р.",
-    },
-    {
-      id: 4,
-      img: "images/products/Stacionar phone.png",
-      name: "IP телефон Siemens Gigaset C530A IP",
-      discount: "13 300 р.",
-      price: "15 500 р.",
-    },
-  ],
-};
+// export const newsItems = {
+//   title: "НОВИНКИ",
+//   badge: badges.NEW,
+//   items: [
+//     {
+//       id: 1,
+//       img: "images/products/Mobile phone black.png",
+//       name: "IP телефон Siemens Gigaset C530A IP",
+//       discount: "12 300 р.",
+//       price: "15 500 р.",
+//     },
+//     {
+//       id: 2,
+//       img: "images/products/Router.png",
+//       name: "IP телефон Siemens Gigaset C530A IP",
+//       discount: "11 300 р.",
+//       price: "15 500 р.",
+//     },
+//     {
+//       id: 3,
+//       img: "images/products/Mobile phone white.png",
+//       name: "IP телефон Siemens Gigaset C530A IP",
+//       discount: "10 300 р.",
+//       price: "15 500 р.",
+//     },
+//     {
+//       id: 4,
+//       img: "images/products/Stacionar phone.png",
+//       name: "IP телефон Siemens Gigaset C530A IP",
+//       discount: "13 300 р.",
+//       price: "15 500 р.",
+//     },
+//   ],
+// };
 
-export const recomendedItems = {
-  title: "РЕКОМЕНДУЕМ",
-  badge: badges.RECOMENDED,
-  items: [
-    {
-      id: 1,
-      img: "images/products/Mobile phone white.png",
-      name: "IP телефон Siemens Gigaset C530A IP",
-      discount: "12 300 р.",
-      price: "15 500 р.",
-    },
-    {
-      id: 2,
-      img: "images/products/Stacionar phone.png",
-      name: "IP телефон Siemens Gigaset C530A IP",
-      discount: "11 300 р.",
-      price: "15 500 р.",
-    },
-    {
-      id: 3,
-      img: "images/products/Mobile phone black.png",
-      name: "IP телефон Siemens Gigaset C530A IP",
-      discount: "10 300 р.",
-      price: "15 500 р.",
-    },
-    {
-      id: 4,
-      img: "images/products/Router.png",
-      name: "IP телефон Siemens Gigaset C530A IP",
-      discount: "13 300 р.",
-      price: "15 500 р.",
-    },
-  ],
-};
+// export const recomendedItems = {
+//   title: "РЕКОМЕНДУЕМ",
+//   badge: badges.RECOMENDED,
+//   items: [
+//     {
+//       id: 1,
+//       img: "images/products/Mobile phone white.png",
+//       name: "IP телефон Siemens Gigaset C530A IP",
+//       discount: "12 300 р.",
+//       price: "15 500 р.",
+//     },
+//     {
+//       id: 2,
+//       img: "images/products/Stacionar phone.png",
+//       name: "IP телефон Siemens Gigaset C530A IP",
+//       discount: "11 300 р.",
+//       price: "15 500 р.",
+//     },
+//     {
+//       id: 3,
+//       img: "images/products/Mobile phone black.png",
+//       name: "IP телефон Siemens Gigaset C530A IP",
+//       discount: "10 300 р.",
+//       price: "15 500 р.",
+//     },
+//     {
+//       id: 4,
+//       img: "images/products/Router.png",
+//       name: "IP телефон Siemens Gigaset C530A IP",
+//       discount: "13 300 р.",
+//       price: "15 500 р.",
+//     },
+//   ],
+// };
 
-export const discountItems = {
-  title: "Распродажа",
-  badge: badges.DISCOUNT,
-  items: [
-    {
-      id: 1,
-      img: "images/products/Mobile phone white.png",
-      name: "IP телефон Siemens Gigaset C530A IP",
-      discount: "12 300 р.",
-      price: "15 500 р.",
-    },
-    {
-      id: 2,
-      img: "images/products/Stacionar phone.png",
-      name: "IP телефон Siemens Gigaset C530A IP",
-      discount: "11 300 р.",
-      price: "15 500 р.",
-    },
-    {
-      id: 3,
-      img: "images/products/Mobile phone black.png",
-      name: "IP телефон Siemens Gigaset C530A IP",
-      discount: "10 300 р.",
-      price: "15 500 р.",
-    },
-    {
-      id: 4,
-      img: "images/products/Router.png",
-      name: "IP телефон Siemens Gigaset C530A IP",
-      discount: "13 300 р.",
-      price: "15 500 р.",
-    },
-  ],
-};
+// export const discountItems = {
+//   title: "Распродажа",
+//   badge: badges.DISCOUNT,
+//   items: [
+//     {
+//       id: 1,
+//       img: "images/products/Mobile phone white.png",
+//       name: "IP телефон Siemens Gigaset C530A IP",
+//       discount: "12 300 р.",
+//       price: "15 500 р.",
+//     },
+//     {
+//       id: 2,
+//       img: "images/products/Stacionar phone.png",
+//       name: "IP телефон Siemens Gigaset C530A IP",
+//       discount: "11 300 р.",
+//       price: "15 500 р.",
+//     },
+//     {
+//       id: 3,
+//       img: "images/products/Mobile phone black.png",
+//       name: "IP телефон Siemens Gigaset C530A IP",
+//       discount: "10 300 р.",
+//       price: "15 500 р.",
+//     },
+//     {
+//       id: 4,
+//       img: "images/products/Router.png",
+//       name: "IP телефон Siemens Gigaset C530A IP",
+//       discount: "13 300 р.",
+//       price: "15 500 р.",
+//     },
+//   ],
+// };
 
-export const stockItems = {
-  title: "АКЦИИ",
-  items: [
-    {
-      id: 11,
-      title: "Название акции",
-      img: "images/sale-banners/Sale banner-1.png",
-      text:
-        "Важными преимуществом использования айпи телефона вместо обычного, является на порядок более низкая цена соединения.",
-      // time_action: { days, hours, minutes },
-    },
-    {
-      id: 22,
-      title: "Название акции",
-      img: "images/sale-banners/Sale banner-2.png",
-      text:
-        "Важными преимуществом использования айпи телефона вместо обычного, является на порядок более низкая цена соединения.",
-      // time_action: { days, hours, minutes },
-    },
-    {
-      id: 33,
-      title: "Название акции",
-      img: "images/sale-banners/Sale banner-3.png",
-      text:
-        "Важными преимуществом использования айпи телефона вместо обычного, является на порядок более низкая цена соединения.",
-      // time_action: { days, hours, minutes },
-    },
-    {
-      id: 44,
-      title: "Название акции",
-      img: "images/sale-banners/Sale banner-4.png",
-      text:
-        "Важными преимуществом использования айпи телефона вместо обычного, является на порядок более низкая цена соединения.",
-      // time: { days, hours, minutes },
-    },
-  ],
-};
+// export const stockItems = {
+//   title: "АКЦИИ",
+//   items: [
+//     {
+//       id: 11,
+//       title: "Название акции",
+//       img: "images/sale-banners/Sale banner-1.png",
+//       text:
+//         "Важными преимуществом использования айпи телефона вместо обычного, является на порядок более низкая цена соединения.",
+//       // time_action: { days, hours, minutes },
+//     },
+//     {
+//       id: 22,
+//       title: "Название акции",
+//       img: "images/sale-banners/Sale banner-2.png",
+//       text:
+//         "Важными преимуществом использования айпи телефона вместо обычного, является на порядок более низкая цена соединения.",
+//       // time_action: { days, hours, minutes },
+//     },
+//     {
+//       id: 33,
+//       title: "Название акции",
+//       img: "images/sale-banners/Sale banner-3.png",
+//       text:
+//         "Важными преимуществом использования айпи телефона вместо обычного, является на порядок более низкая цена соединения.",
+//       // time_action: { days, hours, minutes },
+//     },
+//     {
+//       id: 44,
+//       title: "Название акции",
+//       img: "images/sale-banners/Sale banner-4.png",
+//       text:
+//         "Важными преимуществом использования айпи телефона вместо обычного, является на порядок более низкая цена соединения.",
+//       // time: { days, hours, minutes },
+//     },
+//   ],
+// };
 
-export default {
-  newsItems,
-  recomendedItems,
-  discountItems,
-  stockItems,
-};
+// export default {
+//   newsItems,
+//   recomendedItems,
+//   discountItems,
+//   stockItems,
+// };

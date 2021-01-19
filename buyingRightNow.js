@@ -15,9 +15,7 @@ export default (buyingNow) => {
           <div class="line"></div>
       </div>
       <div class="right-now__wrapper">
-          <div class="right-now_item">
             ${buyingRightNow}
-      </div>
   </div>
 </section>`;
 };

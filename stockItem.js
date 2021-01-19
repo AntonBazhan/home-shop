@@ -14,13 +14,13 @@ export default ({ title, img, description, url, time_action = "" }) => {
           <img src='${img || "./images/other/noimage.png"}' alt="action">
       </div>
       <div class="item__text">${description}</div>
-      ${
-        time_action
-          ? `
       <div class="item__time">
         <div class="item__time_text-left">
             <p>Срок действия:</p>
         </div>
+        ${
+          time_action
+            ? `
         <div class="item__time_clock">
             <div class="clock__number">
                 <span class="clock__number_style">${arr[0][0]}</span>
@@ -36,10 +36,13 @@ export default ({ title, img, description, url, time_action = "" }) => {
         </div>
       </div>
       `
-          : `
-          <h1>DON'T FORGET</h2>
+            : ` 
+          <div class="item__time_clock">
+              <h3 class="item__time_text">бессрочно</h3>
+          </div>
+      </div>
           `
-      }
+        }
       <div class="item__button item__button-action">
           <a class="item__details item__details-action" href="${url}">Подробнее</a>
       </div>

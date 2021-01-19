@@ -189,7 +189,7 @@ body {
 
 .menu__body {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   min-height: 40px;
 }
@@ -384,7 +384,7 @@ body {
 .menu__product_body {
   margin-top: 20px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
   overflow: hidden;
@@ -472,6 +472,8 @@ body {
 
 .news__img {
   border-radius: 5px;
+  width: 63px;
+  height: 63px;
 }
 
 .news__item_left {
@@ -650,6 +652,7 @@ body {
 }
 
 .item__img {
+  padding-top: 30px;
   max-width: 155px;
   height: 165px;
   cursor: pointer;
@@ -788,6 +791,7 @@ body {
 
 .item__time_text-left {
   padding: 8px;
+  width: 70px;
   color: #1a2222;
   font-size: 13px;
   font-weight: 300;
@@ -805,8 +809,8 @@ body {
 }
 
 .clock__number {
-  margin-right: 8px;
-  font-size: 22px;
+  margin-right: 5px;
+  font-size: 15px;
   font-weight: 500;
   line-height: 28px;
   color: #7f8686;
@@ -1341,7 +1345,7 @@ body {
   }
   .right-now__wrapper {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     overflow: hidden;
     height: 250px;
