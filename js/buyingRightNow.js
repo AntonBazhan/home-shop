@@ -1,5 +1,9 @@
 export default (buyingNow) => {
-  const buyingRightNow = buyingNow
+  let buyingNowCopy = [...buyingNow];
+  if (buyingNowCopy.length > 4) {
+    buyingNowCopy = buyingNowCopy.slice(-4);
+  }
+  const buyingRightNow = buyingNowCopy
     .map(
       ({ title, img, url }) => ` <div class="right-now_item">
       <img  src="${img || "./images/other/noimage.png"}" alt="Photo" />

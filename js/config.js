@@ -308,12 +308,32 @@ export const PROMOTIONS = [
 
 export const BUYING_RIGHT_NOW = [
   {
-    title: "Замок дверной Samsung SHS-2320 XMK/EN",
+    title: "Замок дверной Samsung SHS-2320 XMK/EN 1",
     img: "./images/photo/product-1.png",
     url: "https://same_url/item.html",
   },
   {
     title: "Название товара 2",
+    // img: "https://same_url.jpg",
+    url: "https://same_url/item.html",
+  },
+  {
+    title: "Замок дверной Samsung SHS-2320 XMK/EN 3",
+    img: "./images/photo/product-1.png",
+    url: "https://same_url/item.html",
+  },
+  {
+    title: "Название товара 4",
+    // img: "https://same_url.jpg",
+    url: "https://same_url/item.html",
+  },
+  {
+    title: "Замок дверной Samsung SHS-2320 XMK/EN 5",
+    img: "./images/photo/product-1.png",
+    url: "https://same_url/item.html",
+  },
+  {
+    title: "Название товара 6",
     // img: "https://same_url.jpg",
     url: "https://same_url/item.html",
   },
