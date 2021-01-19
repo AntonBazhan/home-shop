@@ -1,4 +1,4 @@
-import { badges } from './constants.js';
+import { badges } from "./constants.js";
 
 const getBadge = (badge) => {
   switch (badge) {
@@ -15,12 +15,12 @@ const getBadge = (badge) => {
       return '<div class="item__icon item__icon_sale">%</div>';
 
     default:
-      return '';
+      return "";
   }
 };
 
-export default ({ id, img, name, discount, price }, badge) => `
-  <div class="item" data-id=${id}>
+export default ({ img, name, discount, price }, badge) => `
+  <div class="item">
       ${getBadge(badge)}
       <div class="item__img">
           <img src="${img}" alt="phone">

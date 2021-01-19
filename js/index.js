@@ -16,7 +16,6 @@ import basketTemplate from "./basket.js";
 import sliderTemplate from "./slider.js";
 import newsTemplate from "./news.js";
 import bannerTemplate from "./banner.js";
-// import slider from './slider.js';
 
 import itemsTemplate from "./itemsTemplate.js";
 import stockItemTemplate from "./stockItem.js";
