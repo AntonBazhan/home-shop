@@ -123,7 +123,7 @@ export const NEWS = [
 export const BANNER = [
   {
     order: 1,
-    img: "../images/icons/slider-bg.png",
+    img: "./images/icons/slider-bg.png",
     url: "voip_equipment.html",
   },
   {
