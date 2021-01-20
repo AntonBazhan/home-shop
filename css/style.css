@@ -766,7 +766,7 @@ body {
 
 .item__details {
   display: inline-block;
-  margin-left: 25px;
+  margin-left: 20px;
   color: #4673ab;
   font-size: 13px;
   font-weight: 300;
@@ -1114,9 +1114,7 @@ body {
   .item__price {
     text-align: center;
   }
-  .item__details {
-    margin-left: 3px;
-  }
+
   .item__details-action {
     margin-left: 0;
   }
@@ -1193,6 +1191,7 @@ body {
     border-radius: 10px;
     padding: 12px 0 12px 15px;
     border: none;
+    cursor: pointer;
   }
   .header__cart__image {
     position: relative;

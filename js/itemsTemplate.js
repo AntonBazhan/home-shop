@@ -38,34 +38,45 @@ export default ({
   return `
   <div class="item" data-id=${id}>
       ${getBadge(type)}
-      
+
           <img class="item__img" src='${
             img || "./images/other/noimage.png"
           }' alt="phone">
-     
+
       <div class="item__title">
         <a class="item__title_link" href="#">
           ${description}
         </a>
       </div>
-      <div class="item__price">Цена:
-        <span class="item__price_true">
-          ${currencyPrice} ${CURRENCY}
-        </span>
-        <span class="item__price_false">
-          ${currencyOldPrice} ${CURRENCY}
-        </span>
+      <div class="item__price">
+        ${
+          price
+            ? `
+          <span>Цена:</span>
+          <span class="item__price_true">
+            ${currencyPrice} ${CURRENCY}
+          </span>
+          <span class="item__price_false">
+            ${currencyOldPrice} ${CURRENCY}
+          </span>
+        `
+            : '<span class="item__price_true">Товар временно недоступный</span>'
+        }
       </div>
-      <div class="item__button">
-          ${
-            price
-              ? `
-              <div class="item__buy"><button class="item__buy_link">купить</button> </div>`
-              : `<p>Товар временно не доступен</p>`
-          }
-              
-          
-          <a class="item__details" href="${url}">Подробнее</a>
+
+      <div class="item__button" >
+      ${
+        price
+          ? `
+            <div class="item__buy">
+            <button class="item__buy_link">
+              купить
+            </button>
+          </div>
+          `
+          : ""
+      }
+        <a class="item__details" href="${url}">Подробнее</a>
       </div>
   </div>
 `;

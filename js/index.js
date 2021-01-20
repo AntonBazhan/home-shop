@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 import {
   TOP_MENU,
   MENU,
@@ -8,55 +8,60 @@ import {
   PROMOTIONS,
   BUYING_RIGHT_NOW,
   BANNER,
-} from "./config.js";
-import { badges } from "./constants.js";
-import topMenuTemplate from "./topMenu.js";
-import menuProductTemplate from "./menuProduct.js";
-import basketTemplate from "./basket.js";
-import sliderTemplate from "./slider.js";
-import newsTemplate from "./news.js";
-import bannerTemplate from "./banner.js";
+} from './config.js';
+import { badges } from './constants.js';
+import topMenuTemplate from './topMenu.js';
+import menuProductTemplate from './menuProduct.js';
+import basketTemplate from './basket.js';
+import sliderTemplate from './slider.js';
+import newsTemplate from './news.js';
+import bannerTemplate from './banner.js';
 
-import itemsTemplate from "./itemsTemplate.js";
-import stockItemTemplate from "./stockItem.js";
-import buyingRightNowTemplate from "./buyingRightNow.js";
+import itemsTemplate from './itemsTemplate.js';
+import stockItemTemplate from './stockItem.js';
+import buyingRightNowTemplate from './buyingRightNow.js';
 
 const userBasket = BASKET;
 
 const refs = {
-  topMenu: document.querySelector("#top-menu"),
-  menuProduct: document.querySelector("#menuProduct"),
-  basket: document.querySelector("#basket"),
-  news: document.querySelector("#news"),
-  slider1: document.querySelector("#slider-1"),
-  slider2: document.querySelector("#slider-2"),
-  slider3: document.querySelector("#slider-3"),
-  slider4: document.querySelector("#slider-4"),
-  buyingRightNow: document.querySelector("#buyingRightNow"),
-  bannerSlider: document.querySelector("#banner_slider"),
+  topMenu: document.querySelector('#top-menu'),
+  menuProduct: document.querySelector('#menuProduct'),
+  basket: document.querySelector('#basket'),
+  news: document.querySelector('#news'),
+  slider1: document.querySelector('#slider-1'),
+  slider2: document.querySelector('#slider-2'),
+  slider3: document.querySelector('#slider-3'),
+  slider4: document.querySelector('#slider-4'),
+  buyingRightNow: document.querySelector('#buyingRightNow'),
+  bannerSlider: document.querySelector('#banner_slider'),
 };
 
-refs.topMenu.insertAdjacentHTML("beforeend", topMenuTemplate(TOP_MENU));
+refs.topMenu.insertAdjacentHTML('beforeend', topMenuTemplate(TOP_MENU));
 
-refs.menuProduct.insertAdjacentHTML("beforeend", menuProductTemplate(MENU));
+refs.menuProduct.insertAdjacentHTML('beforeend', menuProductTemplate(MENU));
 
-refs.news.insertAdjacentHTML("beforeend", newsTemplate(NEWS));
+refs.news.insertAdjacentHTML('beforeend', newsTemplate(NEWS));
 
 const renderBasket = () => {
-  refs.basket.innerHTML = "";
-  refs.basket.insertAdjacentHTML("beforeend", basketTemplate(userBasket));
+  refs.basket.innerHTML = '';
+  refs.basket.insertAdjacentHTML('beforeend', basketTemplate(userBasket));
 };
 
-const handleItemClick = (e) => {
-  const priceElement = e.target
-    .closest(".item")
-    .querySelector(".item__price_true");
-  const price = parseInt(priceElement.textContent.trim());
+const handleSliderClick = (e) => {
+  const item = e.target.closest('.item');
 
-  userBasket.elements += 1;
-  userBasket.price += price;
+  if (!item) return;
 
-  renderBasket();
+  if (e.target.nodeName === 'BUTTON') {
+    const price = parseInt(
+      item.querySelector('.item__price_true').textContent.trim(),
+    );
+
+    userBasket.elements += 1;
+    userBasket.price += price;
+
+    renderBasket();
+  }
 };
 
 const sortByDate = (a, b) => {
@@ -81,46 +86,46 @@ const sortByPriceDiff = (a, b) => {
 };
 
 const newItems = ITEMS.filter(({ type }) => type === badges.NEW).sort(
-  sortByDate
+  sortByDate,
 );
 
 const recommendedItems = ITEMS.filter(
-  ({ type }) => type === badges.RECOMENDED
+  ({ type }) => type === badges.RECOMENDED,
 ).sort(sortByPrice);
 
 const saleItems = ITEMS.filter(({ type }) => type === badges.SALE).sort(
-  sortByPriceDiff
+  sortByPriceDiff,
 );
 
 refs.slider1.insertAdjacentHTML(
-  "beforeend",
-  sliderTemplate(newItems, "Новинки", itemsTemplate)
+  'beforeend',
+  sliderTemplate(newItems, 'Новинки', itemsTemplate),
 );
 
 refs.slider2.insertAdjacentHTML(
-  "beforeend",
-  sliderTemplate(recommendedItems, "Рекомендации", itemsTemplate)
+  'beforeend',
+  sliderTemplate(recommendedItems, 'Рекомендации', itemsTemplate),
 );
 
 refs.slider3.insertAdjacentHTML(
-  "beforeend",
-  sliderTemplate(saleItems, "Распродажа", itemsTemplate)
+  'beforeend',
+  sliderTemplate(saleItems, 'Распродажа', itemsTemplate),
 );
 
-refs.slider1.addEventListener("click", handleItemClick);
-refs.slider2.addEventListener("click", handleItemClick);
-refs.slider3.addEventListener("click", handleItemClick);
+refs.slider1.addEventListener('click', handleSliderClick);
+refs.slider2.addEventListener('click', handleSliderClick);
+refs.slider3.addEventListener('click', handleSliderClick);
 
 refs.slider4.insertAdjacentHTML(
-  "beforeend",
-  sliderTemplate(PROMOTIONS, "АКЦИИ", stockItemTemplate)
+  'beforeend',
+  sliderTemplate(PROMOTIONS, 'АКЦИИ', stockItemTemplate),
 );
 
 refs.buyingRightNow.insertAdjacentHTML(
-  "beforeend",
-  buyingRightNowTemplate(BUYING_RIGHT_NOW)
+  'beforeend',
+  buyingRightNowTemplate(BUYING_RIGHT_NOW),
 );
 
-refs.bannerSlider.insertAdjacentHTML("beforeend", bannerTemplate(BANNER));
+refs.bannerSlider.insertAdjacentHTML('beforeend', bannerTemplate(BANNER));
 
 renderBasket();
